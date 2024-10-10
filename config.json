@@ -1,0 +1,11 @@
+{
+    "timeout_duration": amount in seconds,  
+    "blacklisted_words": ["some blacklisted roles"], 
+    "whitelisted_roles": [123, 456, your role ids here],
+    "auto_trigger": [
+        {
+            "words": ["hello", "hi"], 
+            "response": "hi, you can edit this message and add more!"
+        }
+    ]
+}
