@@ -55,7 +55,6 @@ async def on_message(message):
             break
     else:
         for trigger in config["auto_trigger"]:
-            # Check if any trigger word (case insensitive) is in the message content
             if any(word.lower() in message_content_lower for word in trigger["words"]): 
                 await message.reply(trigger["response"])
                 break
