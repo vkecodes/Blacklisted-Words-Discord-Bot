@@ -9,7 +9,7 @@ from datetime import timedelta
 with open('config.json') as config_file:
     config = json.load(config_file)
 
-bot = commands.Bot(command_prefix='!', intents=nextcord.Intents.all())
+bot = commands.Bot(command_prefix='+', intents=nextcord.Intents.all())
 
 @bot.event
 async def on_ready():
