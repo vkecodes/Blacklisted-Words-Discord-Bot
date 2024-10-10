@@ -26,10 +26,10 @@ async def on_message(message):
     if any(role.id in config["whitelisted_roles"] for role in message.author.roles):
         return 
 
-    message_content_lower = message.content.lower()
+    msg_lower = message.content.lower()
 
     for word in config["blacklisted_words"]:
-        if word.lower() in message_content_lower:  
+        if word.lower() in msg_lower:  
             embed = nextcord.Embed(
                 description=f"{message.author.mention}, you have been muted for saying a **blacklisted word**.",
                 color=nextcord.Color.light_grey() 
@@ -55,7 +55,7 @@ async def on_message(message):
             break
     else:
         for trigger in config["auto_trigger"]:
-            if any(word.lower() in message_content_lower for word in trigger["words"]): 
+            if any(word.lower() in msg_lower for word in trigger["words"]): 
                 await message.reply(trigger["response"], mention_author=False)
                 break
 
