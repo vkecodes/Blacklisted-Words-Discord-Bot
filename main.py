@@ -56,7 +56,7 @@ async def on_message(message):
     else:
         for trigger in config["auto_trigger"]:
             if any(word.lower() in message_content_lower for word in trigger["words"]): 
-                await message.reply(trigger["response"])
+                await message.reply(trigger["response"], mention_author=False)
                 break
 
     await bot.process_commands(message)
