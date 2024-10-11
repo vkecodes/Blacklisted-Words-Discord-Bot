@@ -1,6 +1,6 @@
 {
     "timeout_duration": amount in seconds,  
-    "blacklisted_words": ["some blacklisted roles"], 
+    "blacklisted_words": ["some blacklisted words", "another blacklisted word"], 
     "whitelisted_roles": [123, 456, your role ids here],
     "auto_trigger": [
         {
